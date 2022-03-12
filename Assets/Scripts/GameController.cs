@@ -10,17 +10,32 @@ public class GameController : MonoBehaviour
         instance = this;
     }
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            LoadScene("Menu");
+        }
+
         if (instance == null)
         {
             instance = this;
         }
     }
 
-    public void GoToLevel(string nameLevel)
+    public void Exit()
     {
-        SceneManager.LoadScene(nameLevel);
+        Application.Quit();
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
 }

@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class Finish : MonoBehaviour
 {
-    public string NextLevelName;
+    [SerializeField]
+    private string NextLevelName;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == Tags.Player)
         {
-            GameController.instance.GoToLevel(NextLevelName);
+            GameController.instance.LoadScene(NextLevelName);
         }
     }
 }
