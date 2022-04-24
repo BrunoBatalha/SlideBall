@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GameOver : MonoBehaviour
@@ -6,7 +7,7 @@ public class GameOver : MonoBehaviour
     {
         if(collision.gameObject.tag == Tags.Player)
         {
-            GameController.instance.LoadScene("lvl_0");
+            GameController.instance.GameOver();
         }    
-    }
+    }   
 }

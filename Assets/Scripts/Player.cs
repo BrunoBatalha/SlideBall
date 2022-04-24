@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float Speed;
 
-    public Rigidbody2D _rigidbody2D;
+    private Rigidbody2D _rigidbody2D;
     private bool isClickingToMove;
 
     void Start()
@@ -15,8 +15,11 @@ public class Player : MonoBehaviour
     }
 
     void Update()
-    {     
-        ManageMovement();
+    {
+        if (GameController.instance.canMovementPlayer)
+        {
+            ManageMovement();
+        }
     }
 
     private void ManageMovement()

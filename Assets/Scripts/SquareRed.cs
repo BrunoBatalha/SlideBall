@@ -52,7 +52,7 @@ public class SquareRed : MonoBehaviour
 
         if (isCollingPlayer && spriteRenderer.color == colorToAction)
         {
-            GameController.instance.LoadScene("lvl_0");
+            GameController.instance.GameOver();
         }
     }
 
