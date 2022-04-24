@@ -20,6 +20,10 @@ public class Player : MonoBehaviour
         {
             ManageMovement();
         }
+        else
+        {
+            _rigidbody2D.velocity = new Vector2(0f, 0f);
+        }
     }
 
     private void ManageMovement()

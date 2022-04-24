@@ -50,7 +50,7 @@ public class SquareRed : MonoBehaviour
 
         stopwatchText.text = timePassed.ToString("f0");
 
-        if (isCollingPlayer && spriteRenderer.color == colorToAction)
+        if (isCollingPlayer && spriteRenderer.color == colorToAction && GameController.instance.canMovementPlayer)
         {
             GameController.instance.GameOver();
         }

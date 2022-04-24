@@ -14,9 +14,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        instance = this;
-        gameOverAudio = GetComponent<AudioSource>();
-        nextLevelAudio = GetComponent<AudioSource>();
+        instance = this;      
     }  
 
     private void Awake()
@@ -64,7 +62,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator WaiterLoadScene(string sceneName)
     {
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(1);
         LoadScene(sceneName);
     }
 }
